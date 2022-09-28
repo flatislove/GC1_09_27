@@ -50,5 +50,7 @@ void PrintArray(string[] stringArray)
 
 Console.Clear();
 string[] beginArray = ReadStrings();
+Console.WriteLine("Входная строка:");
 PrintArray(beginArray);
+Console.WriteLine("Результат:");
 PrintArray(GetStringResultArray(beginArray));
