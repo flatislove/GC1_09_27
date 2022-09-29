@@ -13,14 +13,8 @@ string[] ReadStrings()
     {
         Console.WriteLine("Введите строку(Выход - введите EXIT");
         readString = Console.ReadLine();
-        if (!string.IsNullOrEmpty(readString))
-        {
-            correctString = readString;
-        }
-        if (!correctString.ToUpper().Equals("EXIT"))
-        {
-            str += correctString + " ";
-        }
+        if (!string.IsNullOrEmpty(readString)) correctString = readString;
+        if (!correctString.ToUpper().Equals("EXIT")) str += correctString + " ";
         else return GetArrayFromString(str);
     }
 }
@@ -35,10 +29,7 @@ string[] GetStringResultArray(string[] stringArray)
     string resultString = String.Empty;
     foreach (string v in stringArray)
     {
-        if (v.Length > 0 && v.Length <= 3)
-        {
-            resultString += v + " ";
-        }
+        if (v.Length > 0 && v.Length <= 3) resultString += v + " ";
     }
     return GetArrayFromString(resultString);
 }
