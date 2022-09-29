@@ -17,7 +17,7 @@ string[] ReadStrings()
         {
             correctString = readString;
         }
-        if (correctString.ToUpper() != "EXIT")
+        if (!correctString.ToUpper().Equals("EXIT"))
         {
             str += correctString + " ";
         }
